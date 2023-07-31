@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container label {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-container button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Product Form</h1>
+        <form id="myForm" action="/submit" method="POST">
+
+            <input type="hidden" id="successStatus" name="successStatus" value="false">
+
+            <label for="product_id">Product ID:</label>
+            <input type="text" id="product_id" name="product_id" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" name="image" required>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+            <label for="sub_category">Sub Category:</label>
+            <input type="text" id="sub_category" name="sub_category" required>
+            <label for="affiliateLinks">Affiliate Links (separate with commas):</label>
+            <input type="text" id="affiliateLinks" name="affiliateLinks" required>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+      
+</body>
+</html>
